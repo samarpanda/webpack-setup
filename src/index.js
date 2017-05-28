@@ -1,9 +1,8 @@
+import {install as offlineInstall} from 'offline-plugin/runtime'
 // require('./app.css')
-require('./app.scss')
-
-console.log('index.js');
-
-console.log('yo4');
+// require('./app.scss')
+// console.log('index.js');
+// console.log('yo4');
 
 const reloading = document.readyState === 'complete'
 if(module.hot){
@@ -20,3 +19,8 @@ if(module.hot){
 }else{
   console.info(' HMR not supported')
 }
+
+if(process.env.NODE_ENV === 'production'){
+  offlineInstall()
+}
+// System.import()
