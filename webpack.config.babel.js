@@ -18,7 +18,7 @@ module.exports = env => {
     output: {
       filename: ifProd('bundle.[name].[chunkhash].js', 'bundle.[name].js'),
       path: resolve('dist'),
-      // publicPath: '/dist/',
+      publicPath: ifProd('', ''),
       pathinfo: ifNotProd(),
     },
     devtool: env.prod ? 'source-map' : 'eval',
@@ -43,7 +43,14 @@ module.exports = env => {
         },
         {
           test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-          loader: 'file-loader?name=fonts/[name].[ext]'
+          loader: 'file-loader?name=[path][name].[ext]'
+        },
+        {
+          test: /\.(png|jpeg|jpg|gif)$/,
+          loader: ifProd(
+            'file-loader?name=[path][name][hash:5].[ext]',
+            'file-loader?name=[path][name].[ext]'
+          )
         }
       ]
     },
@@ -57,6 +64,8 @@ module.exports = env => {
       new HtmlWebpackPlugin({
         template: './index.html',
         inject: 'head',
+        title: 'webpack setup',
+        hash: true
       }),
       new OfflinePlugin(),
       new webpack.DefinePlugin({

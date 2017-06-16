@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title><%= htmlWebpackPlugin.options.title %></title>
   <%=htmlWebpackPlugin.files.webpackManifest%>
 </head>
 <body>
-<h1>Index file <span>Hi</span></h1>
-
-
+<h1>Quick PWA <span>Hello Demo</span></h1>
+<img src="${require(`./assets/images/images.jpeg`)}">
 <!-- <script type="text/javascript" src="/dist/bundle.js"></script> -->
+<!-- <img src="assets/images/images.jpeg" /> -->
 </body>
 </html>
