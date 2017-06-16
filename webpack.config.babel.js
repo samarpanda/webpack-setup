@@ -12,11 +12,11 @@ module.exports = env => {
   const config = {
     context: resolve('src'),
     entry: {
-      app: './index.js',
-      vendor: ['./app.scss']
+      app: './js/index.js',
+      style: ['./assets/sass/index.scss']
     },
     output: {
-      filename: ifProd('bundle.[name].[chunkhash].js', 'bundle.[name].js'),
+      filename: ifProd('./js/bundle.[name].[chunkhash:6].js', './js/bundle.[name].js'),
       path: resolve('dist'),
       publicPath: ifProd('', ''),
       pathinfo: ifNotProd(),
@@ -43,7 +43,7 @@ module.exports = env => {
         },
         {
           test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-          loader: 'file-loader?name=[path][name].[ext]'
+          loader: 'file-loader?name=[path][name][hash:5].[ext]'
         },
         {
           test: /\.(png|jpeg|jpg|gif)$/,
@@ -56,16 +56,15 @@ module.exports = env => {
     },
     plugins: removeEmpty([
       new ProgressBarWebpackPlugin(),
-      ifProd(new ExtractTextPlugin('styles.[name].[chunkhash].css')),
+      ifProd(new ExtractTextPlugin('./assets/css/bundle.[name].[chunkhash].css')),
       ifProd(new InlineManifestWebpackPlugin()),
       ifProd(new webpack.optimize.CommonsChunkPlugin({
         name: ['vendor', 'manifest']
       })),
       new HtmlWebpackPlugin({
         template: './index.html',
-        inject: 'head',
+        inject: 'body',
         title: 'webpack setup',
-        hash: true
       }),
       new OfflinePlugin(),
       new webpack.DefinePlugin({
