@@ -56,7 +56,7 @@ module.exports = env => {
     },
     plugins: removeEmpty([
       new ProgressBarWebpackPlugin(),
-      ifProd(new ExtractTextPlugin('./assets/css/bundle.[name].[chunkhash].css')),
+      ifProd(new ExtractTextPlugin('./assets/css/bundle.[name].[chunkhash:6].css')),
       ifProd(new InlineManifestWebpackPlugin()),
       ifProd(new webpack.optimize.CommonsChunkPlugin({
         name: ['vendor', 'manifest']
