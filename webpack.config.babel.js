@@ -62,6 +62,7 @@ module.exports = env => {
         name: ['vendor', 'manifest']
       })),
       new HtmlWebpackPlugin({
+        filename: 'index.html',
         template: './index.html',
         inject: 'body',
         title: 'webpack setup',
