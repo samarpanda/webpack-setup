@@ -1,0 +1,16 @@
+{
+  "name": "webpack-setup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+  	"webpack": "webpack"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.16.3"
+  },
+  "repository": "git@github.com:samarpanda/webpack-setup.git",
+  "author": "Samar Panda <er.samarpanda@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
