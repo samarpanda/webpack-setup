@@ -1,3 +1,0 @@
-export SURGE_LOGIN=<your email>
-export SURGE_TOKEN=<your-token>
-node_modules/.bin/surge --project dist --domain https://detailed-frogs.surge.sh/
