@@ -107,3 +107,7 @@ module.exports = ({mode}) => {
 }
 ```
 
+14. Adding webpack plugins - Starting with `html-webpack-plugin` & `progressPlugin`
+
+15.
+
