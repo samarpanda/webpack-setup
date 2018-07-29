@@ -25,3 +25,85 @@ module.exports = {
 
 8. Webpack bundle walkthrough using command `npm run webpack`. Go through the build file(`main.js`) to undestand how webpack runtime works.
 
+9. Webpack input, output & loaders configurations
+
+Loaders
+```js
+module: {
+	rules: [
+		{test: /\.ts$/, use: 'ts-loader'},
+		{test: /\.js$/, use: 'babel-loader'},
+		{test: /\.css$/, use: 'css-loader'}
+	]
+}
+```
+
+```js
+module: {
+	rules: [
+		{
+			test: regex,
+			use: (Array|String|Function),
+			include: RegExp[],
+			exclude: RegExp[],
+			issuer: (RegExp|String)[],
+			enforce: 'pre'|'post'
+		}
+	]
+}
+```
+
+10. Chaining loaders - Tells webpack how to interpret and translate files. Transformed on a per-file basis before adding to the dependency graph.
+
+11. Webpack plugins 
+ a. objects (with and `apply` property)
+ b. Allow to hook into the entire compilation lifecyle
+ c. lots / varities of available plugins
+
+12. Basic plugin example - Plugin is an ES5 'class' which implements an apply function. The compiler uses it to emit events
+
+```js
+function SamplePlugin(){}
+
+SamplePlugin.prototype.apple = function(compiler){
+	if(typeof(process) !== 'undefined'){
+		compiler.plugin('done', function(stats){
+			if(stats.hasErrors()){
+				process.stderr.write('\x07')
+			}
+		});
+
+		compiler.plugin('failed', function(err){
+			process.stderr.write('\x07')
+		})
+	}
+}
+
+module.exports = SamplePlugin
+
+
+//Usage
+//require() from node_modules or webpack or local file
+modules.exports = {
+	//...
+	plugins:[
+		new SamplePlugin()
+	]
+	//..
+}
+```
+
+13. Webpack config - `npm run prod`
+
+```js
+module.exports = ({mode}) => {
+	console.log(mode)
+	return {
+		mode,
+		output: {
+			filename: 'bundle.js'
+		}	
+	}
+}
+```
+
