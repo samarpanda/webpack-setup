@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
   	"webpack": "webpack",
-  	"debug":"npm run webpack -- --inspect --inspect-brk",
+  	"debug":"node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
   	"dev":"npm run webpack -- --mode development",
   	"prod": "npm run webpack -- --mode production",
   	"prod:debug":"npm run debug -- --mode production",
