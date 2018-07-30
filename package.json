@@ -4,8 +4,9 @@
   "main": "index.js",
   "scripts": {
   	"webpack": "webpack",
+  	"webpack-dev-server":"webpack-dev-server",
   	"debug":"node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
-  	"dev":"npm run webpack -- --env.mode development",
+  	"dev":"npm run webpack-dev-server -- --env.mode development",
   	"dev:watch": "npm run dev -- --watch",
   	"prod": "npm run webpack -- --env.mode production",
   	"prod:debug":"npm run debug -- --env.mode production",
@@ -15,7 +16,8 @@
   "dependencies": {},
   "devDependencies": {
     "html-webpack-plugin": "^3.2.0",
-    "webpack": "^4.16.3"
+    "webpack": "^4.16.3",
+    "webpack-dev-server": "^3.1.5"
   },
   "repository": "git@github.com:samarpanda/webpack-setup.git",
   "author": "Samar Panda <er.samarpanda@gmail.com>",
