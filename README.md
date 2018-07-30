@@ -111,3 +111,6 @@ module.exports = ({mode}) => {
 
 15. Adding `webpack-dev-server` for development environment. Try command `npm run dev`. You can see a button added to the browser & changes are reflecting instantly.
 
+16. Splitting environment config files, using webpack-merge & modeConfigs
+
+17. Setting default preset configurations
