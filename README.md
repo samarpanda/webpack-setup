@@ -135,4 +135,4 @@ module.exports = ({mode}) => {
 
 22. Implementing a managable way of configuring presets. Found this to be one of the elegant way i have came across yet. Run command `npm run prod` everything working. Now we can start adding different preset / experimentation configurations those can be composed together.
 
-
+23. Implementing `webpack-bundle-analyzer` preset. You can try prod analyze the build by running `npm run prod:analyze`
