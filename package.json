@@ -10,6 +10,7 @@
     "dev:hot": "npm run webpack-dev-server -- --env.mode development --hot",
     "dev:watch": "npm run dev -- --watch",
     "prod": "npm run webpack -- --env.mode production",
+    "prod:analyze":"npm run prod -- --env.presets analyze",
     "prod:debug": "npm run debug -- --env.mode production",
     "dev:debug": "npm run debug -- --env.mode development",
     "debugthis": "node --inspect --inspect-brk ./src/index.js"
@@ -23,6 +24,7 @@
     "style-loader": "^0.21.0",
     "url-loader": "^1.0.1",
     "webpack": "^4.16.3",
+    "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5",
     "webpack-merge": "^4.1.3"
