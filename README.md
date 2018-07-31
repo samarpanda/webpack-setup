@@ -130,3 +130,5 @@ module.exports = ({mode}) => {
 "webpack-dev-server":"webpack-dev-server",
 "dev":"npm run webpack-dev-server -- --env.mode development --hot"
 ```
+
+21. File loader & Url loader - `url-loader` uses `file-loader` under the hood so we are installing both at the same time. And in webpack.config.js we can only see url-loader but not file-loader as of now.
