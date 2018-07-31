@@ -132,3 +132,7 @@ module.exports = ({mode}) => {
 ```
 
 21. File loader & Url loader - `url-loader` uses `file-loader` under the hood so we are installing both at the same time. And in webpack.config.js we can only see url-loader but not file-loader as of now.
+
+22. Implementing a managable way of configuring presets. Found this to be one of the elegant way i have came across yet. Run command `npm run prod` everything working. Now we can start adding different preset / experimentation configurations those can be composed together.
+
+
