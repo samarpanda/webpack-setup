@@ -10,13 +10,15 @@
     "dev:hot": "npm run webpack-dev-server -- --env.mode development --hot",
     "dev:watch": "npm run dev -- --watch",
     "prod": "npm run webpack -- --env.mode production",
-    "prod:analyze":"npm run prod -- --env.presets analyze",
+    "prod:analyze": "npm run prod -- --env.presets analyze",
+    "prod:compress":"npm run prod -- --env.presets compress",
     "prod:debug": "npm run debug -- --env.mode production",
     "dev:debug": "npm run debug -- --env.mode development",
     "debugthis": "node --inspect --inspect-brk ./src/index.js"
   },
   "dependencies": {},
   "devDependencies": {
+    "compression-webpack-plugin": "^1.1.11",
     "css-loader": "^1.0.0",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
