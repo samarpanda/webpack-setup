@@ -9,6 +9,8 @@ import button from './button.css'
 // import {createImage} from './create-image'
 import createImage from './create-image'
 
+import Foo from './foo.ts'
+
 const button1 = makeButton('Yeap A Button')
 button1.style = makeColorStyle('red')
 document.body.appendChild(button1)
