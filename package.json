@@ -6,7 +6,7 @@
   	"webpack": "webpack",
   	"webpack-dev-server":"webpack-dev-server",
   	"debug":"node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
-  	"dev":"npm run webpack-dev-server -- --env.mode development",
+  	"dev":"npm run webpack-dev-server -- --env.mode development --hot",
   	"dev:watch": "npm run dev -- --watch",
   	"prod": "npm run webpack -- --env.mode production",
   	"prod:debug":"npm run debug -- --env.mode production",
@@ -15,7 +15,9 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "css-loader": "^1.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.21.0",
     "webpack": "^4.16.3",
     "webpack-dev-server": "^3.1.5",
     "webpack-merge": "^4.1.3"
