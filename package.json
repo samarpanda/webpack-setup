@@ -1,0 +1,38 @@
+{
+  "name": "webpack-setup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack",
+    "webpack-dev-server": "webpack-dev-server",
+    "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
+    "dev": "npm run webpack-dev-server -- --env.mode development",
+    "dev:hot": "npm run webpack-dev-server -- --env.mode development --hot",
+    "dev:watch": "npm run dev -- --watch",
+    "prod": "npm run webpack -- --env.mode production",
+    "prod:analyze": "npm run prod -- --env.presets analyze",
+    "prod:compress":"npm run prod -- --env.presets compress",
+    "prod:debug": "npm run debug -- --env.mode production",
+    "dev:debug": "npm run debug -- --env.mode development",
+    "debugthis": "node --inspect --inspect-brk ./src/index.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "compression-webpack-plugin": "^1.1.11",
+    "css-loader": "^1.0.0",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.1",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.16.3",
+    "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5",
+    "webpack-merge": "^4.1.3"
+  },
+  "repository": "git@github.com:samarpanda/webpack-setup.git",
+  "author": "Samar Panda <er.samarpanda@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
