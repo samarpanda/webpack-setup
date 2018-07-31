@@ -111,6 +111,15 @@ module.exports = ({mode}) => {
 
 15. Adding `webpack-dev-server` for development environment. Try command `npm run dev`. You can see a button added to the browser & changes are reflecting instantly.
 
-16. Splitting environment config files, using webpack-merge & modeConfigs
+16. Splitting environment config files, using webpack-merge & modeConfigs `const modeConfig = env => require(`./build-utils/webpack.${env}`)(env)`
 
-17. Setting default preset configurations
+17. Setting default preset configurations `({ mode, presets } = { mode: 'production', presets: [] })`
+
+18. You can add a production config to override the ouput file and run `npm run prod`
+
+19. Using css with webpack development flow. Every change reloads the browser to inject the change.
+
+```js
+"webpack-dev-server":"webpack-dev-server",
+"dev":"npm run webpack-dev-server -- --env.mode development",
+```
