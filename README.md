@@ -109,5 +109,5 @@ module.exports = ({mode}) => {
 
 14. Adding webpack plugins - Starting with `html-webpack-plugin` & `progressPlugin`
 
-15.
+15. Adding `webpack-dev-server` for development environment. Try command `npm run dev`. You can see a button added to the browser & changes are reflecting instantly.
 

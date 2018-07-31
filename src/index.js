@@ -1,8 +1,10 @@
 import nav from './nav'
-import { top, bottom } from './footer'
+import { footer } from './footer'
 import makeButton from './button'
 import {makeColorStyle} from './button-styles'
 
-console.log(nav(), top, bottom)
-console.log(makeButton('My YO button'))
-console.log(makeColorStyle('cyan'))
+const button1 = makeButton('Yeap A Button')
+button1.style = makeColorStyle('red')
+
+document.body.appendChild(button1)
+document.body.appendChild(footer)
