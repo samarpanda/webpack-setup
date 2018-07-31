@@ -123,3 +123,10 @@ module.exports = ({mode}) => {
 "webpack-dev-server":"webpack-dev-server",
 "dev":"npm run webpack-dev-server -- --env.mode development",
 ```
+
+20. Hot module replacement with css using `--hot` flag
+
+```js
+"webpack-dev-server":"webpack-dev-server",
+"dev":"npm run webpack-dev-server -- --env.mode development --hot"
+```
