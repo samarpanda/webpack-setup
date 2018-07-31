@@ -1,4 +1,8 @@
-// import nav from './nav'
+import nav from './nav'
+import { top, bottom } from './footer'
+import makeButton from './button'
+import {makeColorStyle} from './button-styles'
 
-console.log('webpack 4 default entry point')
-// console.log(nav)
+console.log(nav(), top, bottom)
+console.log(makeButton('My YO button'))
+console.log(makeColorStyle('cyan'))
