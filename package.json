@@ -17,7 +17,8 @@
   "devDependencies": {
     "html-webpack-plugin": "^3.2.0",
     "webpack": "^4.16.3",
-    "webpack-dev-server": "^3.1.5"
+    "webpack-dev-server": "^3.1.5",
+    "webpack-merge": "^4.1.3"
   },
   "repository": "git@github.com:samarpanda/webpack-setup.git",
   "author": "Samar Panda <er.samarpanda@gmail.com>",
